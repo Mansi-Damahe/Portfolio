@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mansi's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .blur-3xl {
+      filter: blur(100px);
+    }
+    .bg-animate {
+      position: absolute;
+      border-radius: 9999px;
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(50px, -50px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#0D1117] text-white overflow-x-hidden relative scroll-smooth">
+
+  <!-- Animated Background -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="w-64 h-64 bg-[#1F6FEB]/10 blur-3xl bg-animate" style="top:10%; left:5%;"></div>
+    <div class="w-72 h-72 bg-[#FF6F61]/10 blur-3xl bg-animate" style="top:40%; right:10%; animation-delay: 2s;"></div>
+    <div class="w-80 h-80 bg-[#00C9A7]/10 blur-3xl bg-animate" style="bottom:15%; left:20%; animation-delay: 4s;"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center px-4 relative z-10 text-center max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1F6FEB] to-[#00C9A7]">
+      Entry-Level Analyst with a Passion for Solving Real-World Problems Through Data
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8">Analyzing data, driving growth</p>
+    <a href="#about" class="px-8 py-3 bg-gradient-to-r from-[#1F6FEB] to-[#00C9A7] rounded-full text-white font-medium hover:shadow-lg transition-all duration-300">
+      Explore My Work
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 md:px-8 lg:px-16 relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-16">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#1F6FEB] to-[#00C9A7]">About Me</span>
+    </h2>
+    <p>
+      Hi, I’m Mansi Damahe, a Biotech Engineer transitioning into Data Analytics. Passionate about transforming data into insights and solving real-world problems with analytical thinking.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4 md:px-8 lg:px-16 relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-16">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#1F6FEB] to-[#FF6F61]">Skills</span>
+    </h2>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-6 text-lg">
+      <li>Python</li>
+      <li>Pandas</li>
+      <li>Excel</li>
+      <li>SQL</li>
+      <li>Power BI</li>
+      <li>Data Visualization</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-4 md:px-8 lg:px-16 relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-16">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#00C9A7]">Projects</span>
+    </h2>
+    <div class="grid gap-6">
+      <div class="p-6 bg-[#161B22] rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Health Data Insights</h3>
+        <p>A complete health data analysis dashboard using Excel, Power BI, and SQL. Shows trends, patterns, and actionable insights.</p>
+      </div>
+      <div class="p-6 bg-[#161B22] rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Fruit DNA Yield Study</h3>
+        <p>Analyzed DNA extraction efficiency from various fruits — a fusion of biotech lab work and data analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4 md:px-8 lg:px-16 relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-16">
+      <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#00C9A7] to-[#1F6FEB]">Contact Me</span>
+    </h2>
+    <p>Email: <a href="mailto:mansidamahe@example.com" class="text-blue-400 underline">mansidamahe@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/mansidamahe" target="_blank" class="text-blue-400 underline">linkedin.com/in/mansidamahe</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 text-center text-gray-400 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <p>© <span id="year"></span> Mansi's Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
